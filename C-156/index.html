@@ -1,0 +1,53 @@
+<!----------------------------------------------Sneaky Squirrel-------------------------------------------->
+
+<!--Doctype tag-->
+<!DOCTYPE>
+
+<!--Head tag-->
+<head>
+    <!--Script tags-->
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="eventshandler.js"></script>
+</head>
+
+<!--Body tag-->
+<body>
+    <!--Hello tag-->
+    <h1>Hello</h1>
+
+   <!--Scene tag--> 
+   <a-scene id="scene_wrld">
+
+    <!--Aseets tag-->
+    <a-assets>
+        
+        <!--Asset-Item tag-->
+        <a-asset-item id="squirrel_opponent" src="./squirrel/scene.gltf"></a-asset-item>
+    </a-assets>
+
+    <!--Camera tag-->
+    <a-camera id="camera_pl" rotation="180 0 0">
+
+        <!--Cursor tag-->
+        <a-cursor geometry="primitive: ring; radiusInner: 0.03; radiusOuter: 0.04"></a-cursor>
+    </a-camera>
+
+    <!--Intrductory Text tags-->
+    <a-entity id="intro_tx">
+    <a-entity position="0 13 -15" text="value:WELCOME TO MY GAME;color:white;align:center;font:mozillavr;width:30"></a-entity>
+    <a-entity position="0 11 -15" text="value:It's a nice green patch of land, isn't it. Well squirrels like me have prerferences...;color:white;align:center;font:mozillavr;width:11"></a-entity>
+    <a-entity position="0 9 -15" text="value:Ahh.. what am I rambling about, anyways here are the instructions for my game.;color:white;align:center;font:mozillavr;width:11"></a-entity>
+    <a-entity position="0 7 -15" text="value:Now when you click on me, I will start changing my positon flamboyantly and randomly,about  every second;color:white;align:center;font:mozillavr;width:11"></a-entity>
+    <a-entity position="0 5 -15" text="value:All you have to do is catch me.... 10 times in 1 minute 50 seconds. So are you ready?, Then click on me (clicking is bascially pointing the cursor towards something and clicking if you are wondering);color:white;align:center;font:mozillavr;width:11"></a-entity>
+    <a-entity position="0 3 -15" text="value:Remember I might spawn everywhere, so be sure to look everywhere,even below you;color:white;align:center;font:mozillavr;width:11"></a-entity>
+    </a-entity>  
+
+    <!--Squirrel tag-->
+    <a-entity events-handler id="squirrel_pl" scale="2 2 2" position="0 1 -10" gltf-model="#squirrel_opponent"></a-entity>
+      
+    <!--Sky tag-->
+    <a-sky src="field.jpeg"></a-sky>
+   </a-scene>
+</body>
+
+<!----------------------------------------------Sneaky Squirrel-------------------------------------------->
